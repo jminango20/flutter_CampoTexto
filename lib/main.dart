@@ -2,6 +2,7 @@ import 'package:entrada_de_dados/CampoTexto.dart';
 import 'package:entrada_de_dados/EntradaCheckbox.dart';
 import 'package:flutter/material.dart';
 import 'EntradaRadioButton.dart';
+import 'EntradaSlider.dart';
 import 'EntradaSwitch.dart';
 
 void main(){
@@ -10,7 +11,8 @@ void main(){
     //home: CampoTexto(),
         // home: EntradaCheckbox(),
         //home: EntradaRadioButton(),
-        home: EntradaSwitch(),
+        //home: EntradaSwitch(),
+        home: EntradaSlider(),
   ));
 }
 
