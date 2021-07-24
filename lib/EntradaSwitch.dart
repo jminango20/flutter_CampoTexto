@@ -19,6 +19,36 @@ class _EntradaSwitchState extends State<EntradaSwitch> {
       body: Container(
         child: Column(
           children: [
+            SwitchListTile(
+              title: Text("Aceptar Notificaciones?"),
+                value: _escolhaUsuario,
+                onChanged: (bool escolha){
+                  setState(() {
+                    _escolhaUsuario = escolha;
+                  });
+                }
+            ),
+            SwitchListTile(
+                title: Text("Aceptar Cargar Imagenes?"),
+                value: _cargarImagem,
+                onChanged: (bool escolha){
+                  setState(() {
+                    _cargarImagem = escolha;
+                  });
+                }
+            ),
+            RaisedButton(
+                child: Text("Guardar",
+                style: TextStyle(
+                  fontSize: 25
+                ),
+                ),
+                onPressed: (){
+                  print("Notificacion: " + _escolhaUsuario.toString() + " Imagen: " + _cargarImagem.toString());
+                }
+                )
+
+            /*
             Switch(
                 value: _escolhaUsuario,
                 onChanged: (bool escolha){
@@ -39,6 +69,8 @@ class _EntradaSwitchState extends State<EntradaSwitch> {
                 }
             ),
             Text("Aceptar cargar imagenes? "),
+            */
+
           ],
         ),
       ),
