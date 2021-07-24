@@ -28,6 +28,7 @@ class _EntradaSwitchState extends State<EntradaSwitch> {
                   });
                 }
             ),
+            /*
             SwitchListTile(
                 title: Text("Aceptar Cargar Imagenes?"),
                 value: _cargarImagem,
@@ -37,6 +38,7 @@ class _EntradaSwitchState extends State<EntradaSwitch> {
                   });
                 }
             ),
+            */
             RaisedButton(
                 child: Text("Guardar",
                 style: TextStyle(
@@ -44,7 +46,13 @@ class _EntradaSwitchState extends State<EntradaSwitch> {
                 ),
                 ),
                 onPressed: (){
-                  print("Notificacion: " + _escolhaUsuario.toString() + " Imagen: " + _cargarImagem.toString());
+                  //print("Notificacion: " + _escolhaUsuario.toString() + " Imagen: " + _cargarImagem.toString());
+                  if(_escolhaUsuario){
+                    print("Escojio activar notificaciones y cargar imagenes");
+                  }
+                  else {
+                    print("NO Escojio activar notificaciones ni cargar imagenes");
+                  }
                 }
                 )
 
