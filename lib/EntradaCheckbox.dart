@@ -7,7 +7,8 @@ class EntradaCheckbox extends StatefulWidget {
 }
 
 class _EntradaCheckboxState extends State<EntradaCheckbox> {
-  bool _estaSelecionado = false;
+  bool _comidaBrasilena = false;
+  bool _comidaMexicana = false;
 
   @override
   Widget build(BuildContext context) {
@@ -24,14 +25,35 @@ class _EntradaCheckboxState extends State<EntradaCheckbox> {
                 activeColor: Colors.red,
                 //selected: true,
                 //secondary: Icon(Icons.add_box),
-                value: _estaSelecionado,
+                value: _comidaBrasilena,
                 onChanged: (bool valor){
                   setState(() {
-                    _estaSelecionado = valor;
+                    _comidaBrasilena = valor;
                   });
                 }
-                )
-
+                ),
+            CheckboxListTile(
+                title: Text("Comida Mexicana"),
+                subtitle: Text("La mejor comida del mundo"),
+                activeColor: Colors.red,
+                //selected: true,
+                //secondary: Icon(Icons.add_box),
+                value: _comidaMexicana,
+                onChanged: (bool valor){
+                  setState(() {
+                    _comidaMexicana = valor;
+                  });
+                }
+            ),
+            RaisedButton(
+              child: Text("Guardar",
+                style: TextStyle(
+                  fontSize: 20
+                ),
+              ),
+                onPressed: (){
+                  print("Comida Brasilena: " + _comidaBrasilena.toString() + ", " + " Comida Mexicana: " + _comidaMexicana.toString());
+                }),
             /*
             Text("Comida Brasilena"),
             Checkbox(
