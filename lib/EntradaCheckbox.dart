@@ -18,6 +18,21 @@ class _EntradaCheckboxState extends State<EntradaCheckbox> {
       body: Container(
         child: Column(
           children: [
+            CheckboxListTile(
+                title: Text("Comida Brasilena"),
+                subtitle: Text("La mejor comida del mundo"),
+                activeColor: Colors.red,
+                //selected: true,
+                //secondary: Icon(Icons.add_box),
+                value: _estaSelecionado,
+                onChanged: (bool valor){
+                  setState(() {
+                    _estaSelecionado = valor;
+                  });
+                }
+                )
+
+            /*
             Text("Comida Brasilena"),
             Checkbox(
                 value: _estaSelecionado,
@@ -28,6 +43,8 @@ class _EntradaCheckboxState extends State<EntradaCheckbox> {
                   print("Checkbox: " + valor.toString());
                 },
             ),
+            */
+
           ],
         ),
       ),
