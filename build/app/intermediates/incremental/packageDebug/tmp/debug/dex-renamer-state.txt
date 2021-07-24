@@ -1,0 +1,4 @@
+#Sat Jul 24 15:40:31 BRT 2021
+base.0=C\:\\Users\\Minango\\AndroidStudioProjects\\entrada_de_dados\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
